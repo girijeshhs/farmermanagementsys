@@ -113,6 +113,32 @@
 
   <!-- Template Main JS File -->
   <script src="static/assets/js/main.js"></script>
+  
+  <!-- Auto-scroll functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // The intro section is your hero section
+        const heroSection = document.getElementById('intro');
+        
+        if (heroSection) {
+            const heroHeight = heroSection.offsetHeight;
+            const currentPage = window.location.pathname;
+            
+            // Check if we're on a page that needs scrolling
+            if (currentPage.includes('/register') || 
+                currentPage.includes('/farmerdetails') || 
+                currentPage.includes('/addfarming') ||
+                currentPage.includes('/agroproducts') ||
+                currentPage.includes('/triggers')) {
+                // Scroll past the hero section
+                window.scrollTo({
+                    top: heroHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+  </script>
 
 </body>
 

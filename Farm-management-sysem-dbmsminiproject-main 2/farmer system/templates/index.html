@@ -5,7 +5,6 @@ Student
 {% block home %}
 menu-active
 {% endblock home %}
-
 {% block body %}
   
   <!-- ======= Footer ======= -->
@@ -13,7 +12,6 @@ menu-active
     <div class="footer-top">
      
     </div>
-
     <div class="container">
    
       <div class="credits">
@@ -22,4 +20,26 @@ menu-active
       </div>
     </div>
   </footer><!-- End  Footer -->
+
+  <!-- Chatbase Widget Script -->
+  <script>
+    (function() {
+      var chatbaseConfig = {
+        chatbotId: "wwPiDVV97V0cYOYnHhof4",
+        domain: "www.chatbase.co"
+      };
+      
+      window.chatbase = window.chatbase || function() {
+        (chatbase.q = chatbase.q || []).push(arguments);
+      };
+      
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.chatbase.co/embed.min.js';
+      script.id = chatbaseConfig.chatbotId;
+      document.head.appendChild(script);
+      
+      chatbase('config', chatbaseConfig);
+    })();
+  </script>
 {% endblock body %}
